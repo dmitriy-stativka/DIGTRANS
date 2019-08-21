@@ -1,0 +1,97 @@
+body{
+  font: 14px/1 'Montserrat', sans-serif;
+  color: $black;
+}
+
+a{
+  text-decoration: none;
+  color: $black;
+  transition: color 0.2s ease;
+  outline: none!important;
+
+  &:hover{
+    transition: color 0.2s ease;
+  }  
+
+  &:active,
+  &:focus,
+  &:visited{
+    color: initial;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  
+  &_flexfix {
+    display: flex;
+  }
+}
+
+.header,
+.footer {
+	flex-shrink: 1;
+	width: 100%;
+}
+
+.main {
+	flex-grow: 1;
+	width: 100%;
+}
+
+input {
+  &:visited,
+  &:active,
+  &:hover,
+  &:focus {
+
+    border: none;
+    outline: none;
+  }
+}
+
+a.org-button{
+  background-color: $orange;
+  font-size: 14px;
+  color: $black;
+  display: block;
+  padding: 16px;
+  border-radius: 3px;
+  font-weight: 500;
+
+  &.call-back-button{
+    display: flex;
+    align-items: center;
+
+    &:before{
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: block;
+      padding-right: 30px;
+      background: url('../images/callback.svg') no-repeat;
+    }
+  }
+
+  &:hover{
+    background-color: $hover-orange;
+    transition: background-color .2s ease;
+  }
+}

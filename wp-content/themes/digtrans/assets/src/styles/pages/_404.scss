@@ -1,0 +1,18 @@
+.error-page{
+  padding: 25px 0;
+  text-align: center;
+
+  p{
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  a{
+    border-radius: 3px;
+    font-weight: 700;
+    color: #fff;
+    padding: 6px 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 5px 0;
+  }
+}

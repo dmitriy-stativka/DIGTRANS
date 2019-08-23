@@ -194,4 +194,32 @@ add_action('init', 'register_post_types');
             'menu_position'      => null,
             'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
           ));
+
+          register_post_type('technics', array(
+            'labels'             => array(
+              'name'               => 'Техника', // Основное название типа записи
+              'singular_name'      => 'Техника', // отдельное название записи типа Book
+              'add_new'            => 'Добавить технику',
+              'add_new_item'       => 'Добавить новый технику',
+              'edit_item'          => 'Редактировать слайдер',
+              'new_item'           => 'Новая техника',
+              'view_item'          => 'Посмотреть технику',
+              'search_items'       => 'Найти технику',
+              'not_found'          => 'Не найдено',
+              'not_found_in_trash' => 'В корзине ничего не найдено',
+              'parent_item_colon'  => '',
+              'menu_name'          => 'Техника'
+              ),
+            'public'             => true,
+            'publicly_queryable' => true,
+            'show_ui'            => true,
+            'show_in_menu'       => true,
+            'query_var'          => true,
+            'rewrite'            => true,
+            'capability_type'    => 'post',
+            'has_archive'        => false,
+            'hierarchical'       => false,
+            'menu_position'      => null,
+            'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+          ));
 }

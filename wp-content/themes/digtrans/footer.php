@@ -28,29 +28,6 @@
             slidesToScroll: 1,
             dots: true,
             dotsClass: 'slick-dots',
-            responsive: [
-            {
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-            },
-            {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-            },
-            {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-            }
-        ]
 		});
 		
 		

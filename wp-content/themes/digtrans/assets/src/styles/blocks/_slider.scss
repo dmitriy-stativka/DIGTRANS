@@ -1,0 +1,44 @@
+.main_gallery{
+  b{
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 45px;
+    margin-bottom: 25px;
+    display: block;
+  }
+
+  &_image{
+    padding-right: 50px;
+  }
+  &_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
+
+    a.org-button{
+      width: 170px;
+      margin-bottom: 20px;
+    }
+
+    .price_slider{
+      p{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0;
+
+        span{
+          color: $orange;
+        }
+      }
+    }
+    .smena_slider{
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 500;
+    }
+  }
+}
+
+

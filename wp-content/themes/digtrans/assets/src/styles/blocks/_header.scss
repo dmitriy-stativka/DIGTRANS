@@ -1,7 +1,5 @@
 .header {
-  padding: 15px 0;
-
-  
+  padding: 15px 0 50px 0;
 
   .flex_container {
     display: flex;
@@ -66,21 +64,46 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      margin: 0 -20px;
       
       .page_item {
+        position: relative;
+
         a{
           color: $white;
-          padding: 20px;
+          padding: 20px 0;
           display: block;
+
+          &:after{
+            content: '';
+            width: 0;
+            height: 1px;
+            background-color: $white;
+            transition: width .3s ease;
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+          }
         }
 
         &:hover{
-          text-decoration: underline;
+          a{
+            &:after{
+              width: 100%;
+              transition: width .3s ease;
+            }
+          }
         }
-        
+
         &.current_page_item{
-          text-decoration: underline;
+          a{
+            &:after{
+              content: '';
+              width: 100%;
+              transition: width .3s ease;
+            }
+          }
         }
       }
     }

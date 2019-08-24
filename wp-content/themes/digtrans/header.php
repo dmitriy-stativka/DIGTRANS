@@ -15,14 +15,13 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="wp-content/themes/digtrans/js/slick.js"></script>
     <title><?php the_title(); ?></title>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php $home_page = get_home_url();?>
-
-
-
 <header class="header">
     <div class="language">
         <div class="flex_container">

@@ -86,11 +86,24 @@ button {
           flex-grow: 1;
   width: 100%; }
 
-input:visited, input:active, input:hover, input:focus {
+input {
+  background: #9e9c9e;
+  opacity: .5;
+  border-radius: 5px;
+  width: 175px;
+  padding: 8px;
   border: none;
   outline: none; }
+  input[type="submit"] {
+    opacity: 1;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer; }
+  input:visited, input:active, input:hover, input:focus {
+    background: #fff;
+    opacity: 1; }
 
-a.org-button {
+.org-button {
   background-color: #F1911E;
   font-size: 14px;
   color: #000;
@@ -99,29 +112,36 @@ a.org-button {
   padding: 16px;
   border-radius: 3px;
   font-weight: 500; }
-  a.org-button.call-back-button {
+  .org-button.call-back-button {
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
             align-items: center; }
-    a.org-button.call-back-button:before {
+    .org-button.call-back-button:before {
       content: '';
       width: 20px;
       height: 20px;
       display: block;
       padding-right: 30px;
       background: url("../images/callback.svg") no-repeat; }
-  a.org-button:hover {
+  .org-button:hover {
     background-color: #dc7f0f;
     -webkit-transition: background-color .2s ease;
     transition: background-color .2s ease; }
 
-b.title-name {
+.title-name {
   font-size: 24px;
   line-height: 29px;
   font-weight: 800;
   display: block;
   padding: 50px 0 25px 0px; }
+
+.single-title {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 15px; }
 
 *,
 *:before,
@@ -319,6 +339,53 @@ textarea {
           -webkit-transition: width .3s ease;
           transition: width .3s ease; }
 
+.technik_link b {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
+  margin: 10px 0; }
+
+.technik_link span.org-button {
+  max-width: 175px; }
+
+.page-template .technik_link,
+.single-technics .technik_link {
+  padding-bottom: 25px; }
+
+.page-template .title-name {
+  padding-top: 0; }
+
+.characteristics_technik {
+  margin: 15px 0; }
+  .characteristics_technik li {
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 10px 0; }
+    .characteristics_technik li i {
+      font-style: normal;
+      color: #F1911E;
+      font-weight: bold; }
+
+.single-technik [class^="flex_col"] {
+  display: block; }
+
+.single-technik .characteristics_technik li {
+  font-size: 18px;
+  line-height: 22px; }
+
+.single-technik .list_items_techniks {
+  margin-bottom: 40px; }
+  .single-technik .list_items_techniks li {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 25px; }
+
+.single-technik .org-button.call-button {
+  max-width: 175px;
+  margin-top: 20px; }
+
 .main_gallery b {
   font-size: 32px;
   font-weight: 800;
@@ -352,6 +419,61 @@ textarea {
     font-size: 18px;
     line-height: 22px;
     font-weight: 500; }
+
+.call-back {
+  padding: 0 0 50px 0;
+  margin: 50px 0;
+  position: relative;
+  background-image: url("../images/call_back.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff; }
+  .call-back:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); }
+  .call-back .title-name {
+    padding-bottom: 0; }
+  .call-back p {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px; }
+    .call-back p span {
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px; }
+  .call-back form {
+    margin-top: 20px; }
+    .call-back form input {
+      margin-top: 10px; }
+    .call-back form p {
+      font-weight: normal; }
+
+.utp [class^="flex_col"] {
+  display: block; }
+
+.utp p {
+  font-size: 14px;
+  line-height: 25px; }
+
+.utp_list {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px; }
+
+.utp_item {
+  width: 50%;
+  padding: 0 15px; }
+  .utp_item p {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+    max-width: 220px; }
 
 .error-page {
   padding: 25px 0;

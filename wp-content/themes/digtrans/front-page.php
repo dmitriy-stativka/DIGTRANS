@@ -43,24 +43,36 @@
                     <?php endwhile; ?>
             <?php endif; ?>
         </div>
-
         <div class="technics">
             <b class="title-name">Аренда спецтехники в Одессе</b>
-            <div class="flex_row">
-                <div class="flex_col--1-4">
-                    lorem
-                </div>
-                <div class="flex_col--1-4">
-                    lorem
-                </div>
-                <div class="flex_col--1-4">
-                    lorem
-                </div>
-                <div class="flex_col--1-4">
-                    lorem
-                </div>
-            </div>
+            <?php include('/template-parts/techniks.php');?>
+        </div>
+    </div>
+    <div class="call-back">
+        <div class="flex_container">
+            <b class="title-name">Особые условия крупным клиентам </b>
+            <p>У вас крупная компания?  Мы предлагаем выгодные условия </p>
+            <p><span>Наш специалист свяжется с вами в течение 5 минут!</span></p>
+            <?php echo do_shortcode('[contact-form-7 id="72" title="Без названия"]');?>
+        </div>
+    </div>
+    <div class="utp">
+        <div class="flex_container">
+            <b class="title-name">Почему стоит с нами работать</b>
+            <?php include('/template-parts/utp.php');?>
         </div>
     </div>
 </div>
+
+<script>
+    $('.main_gallery').slick({
+        arrows: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        dotsClass: 'slick-dots'
+    });
+</script>
+
 <?php get_footer();?>

@@ -1,0 +1,73 @@
+.technik_link{
+
+    b{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        display: block;
+        margin: 10px 0;
+    }
+    span{
+        &.org-button{
+            max-width: 175px;
+        }
+    }
+}
+.page-template,
+.single-technics{
+    .technik_link{
+        padding-bottom: 25px;
+    }
+}
+.page-template{
+
+    .title-name{
+        padding-top: 0;
+    }
+}
+.characteristics_technik{
+    margin: 15px 0;
+
+    li{
+        display: block;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 10px 0;
+
+        i{
+            font-style: normal;
+            color: $orange;
+            font-weight: bold;
+        }
+    }
+}
+
+.single-technik{
+    [class^="flex_col"]{
+        display: block;
+    }
+
+    .characteristics_technik{
+        li{
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    .list_items_techniks{
+        margin-bottom: 40px;
+
+        li{
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+
+    .org-button{
+        &.call-button{
+            max-width: 175px;
+            margin-top: 20px;
+        }
+    }
+}

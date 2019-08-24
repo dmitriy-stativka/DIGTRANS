@@ -1,0 +1,25 @@
+.utp{
+    [class^="flex_col"]{
+        display: block;
+    }
+    p{
+        font-size: 14px;
+        line-height: 25px;
+    }
+    &_list{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    &_item{
+        width: 50%;
+        padding: 0 15px;
+
+        p{
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 600;
+            max-width: 220px;
+        }
+    }
+}

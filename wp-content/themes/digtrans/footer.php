@@ -10,31 +10,9 @@
  */
 
 ?>
+<footer>
 
-	<footer>
-
-    </footer>
-
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="wp-content/themes/digtrans/js/slick.js"></script>
-    
-    <script>
-        
-		$('.main_gallery').slick({
-            arrows: true,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            dotsClass: 'slick-dots',
-		});
-		
-		
-</script>
-
-
+</footer>
 <?php wp_footer(); ?>
-
 </body>
 </html>

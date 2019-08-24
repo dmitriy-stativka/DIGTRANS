@@ -221,5 +221,36 @@ add_action('init', 'register_post_types');
             'hierarchical'       => false,
             'menu_position'      => null,
             'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
-          ));
+		  ));
+
+
+		  register_post_type('utp', array(
+            'labels'             => array(
+              'name'               => 'УТП', // Основное название типа записи
+              'singular_name'      => 'УТП', // отдельное название записи типа Book
+              'add_new'            => 'Добавить утп',
+              'add_new_item'       => 'Добавить новое утп',
+              'edit_item'          => 'Редактировать утп',
+              'new_item'           => 'Новое утп',
+              'view_item'          => 'Посмотреть утп',
+              'search_items'       => 'Найти утп',
+              'not_found'          => 'Не найдено',
+              'not_found_in_trash' => 'В корзине ничего не найдено',
+              'parent_item_colon'  => '',
+              'menu_name'          => 'УТП'
+              ),
+            'public'             => true,
+            'publicly_queryable' => true,
+            'show_ui'            => true,
+            'show_in_menu'       => true,
+            'query_var'          => true,
+            'rewrite'            => true,
+            'capability_type'    => 'post',
+            'has_archive'        => false,
+            'hierarchical'       => false,
+            'menu_position'      => null,
+            'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+		  ));
+		  
+		  
 }

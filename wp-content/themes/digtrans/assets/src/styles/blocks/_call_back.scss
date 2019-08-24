@@ -1,0 +1,45 @@
+.call-back{
+    padding: 0 0 50px 0;
+    margin: 50px 0;
+    position: relative;
+    background-image: url('../images/call_back.jpg');
+    background-size: cover;
+    background-position: center;
+    color: $white;
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0, .6);
+    }
+
+    .title-name{
+        padding-bottom: 0;
+    }
+
+    p{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+
+        span{
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+    form{
+        margin-top: 20px;
+
+        input{
+            margin-top: 10px;
+        }
+        p{
+            font-weight: normal;
+        }
+    }
+}

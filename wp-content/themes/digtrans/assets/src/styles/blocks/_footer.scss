@@ -1,0 +1,70 @@
+.footer{
+    padding: 50px 0;
+    margin-top: 50px;
+    background-color: $gray;
+
+    a{
+        color: $white;
+        padding: 0;
+        transition: color .2s ease;
+
+        &:hover{
+            color: $orange;
+            box-shadow: none;
+            transition: color .2s ease;
+        }
+    }
+    
+    span{
+        font-size: 12px;
+        display: block;
+        color: $white;
+        margin-bottom: 15px;
+    }
+    
+    b{
+        display: block;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: $white;
+    }
+
+    .org-button{
+        height: 52px;
+        max-width: 200px;
+        color: $black;
+        padding: 16px;
+
+        &:hover{
+            color: $black;
+        }
+    }
+
+    &_flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;        
+    }
+
+    &--tell{
+        color: $white;
+        font-weight: 600;
+    }
+
+    b.footer-title{
+        text-transform: none;
+        margin: 25px 0 20px 0;
+    }
+
+    &--list{
+        li{
+            margin: 10px 0;
+            
+            a{
+                font-size: 12px;
+                line-height: 15px;
+                color: $white;
+            }
+        }
+    }
+}

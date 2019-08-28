@@ -35,7 +35,7 @@ get_header(); ?>
 						<li>Цена: <i><?php echo $price_technik;?></i></li>
 						<li>Смена: <?php echo $smena_technik;?></li>
 					</ul>
-					<a class="org-button call-button">Заказать звонок</a>
+					<a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-button">Заказать звонок</a>
 				</div>
 				<div class="flex_col--2-4">
 					<div class="single-image">
@@ -49,6 +49,13 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
+	<?php include('/template-parts/call-back.php');?>
+	<?php include('/template-parts/contacts.php');?>
 
+	<style>
+		.call-back{
+			margin-bottom: 0;
+		}
+	</style>
 <?php
 get_footer();

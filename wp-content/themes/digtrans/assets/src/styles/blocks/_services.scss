@@ -1,0 +1,29 @@
+.services{
+    padding-bottom: 50px;
+
+    .flex_col--1-4{
+        padding: 0;
+    }
+
+    &_link{
+        transition: box-shadow .3s ease;
+        padding: 15px 20px;
+
+        &:hover{
+            transition: box-shadow .3s ease;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+    }
+
+    &_name{
+        font-size: 12px;
+        line-height: 15px;
+        display: block;
+        margin-bottom: 15px;
+        font-weight: normal;
+    }
+    .org-button{
+        min-width: 175px;
+        margin-top: 15px;
+    }
+}

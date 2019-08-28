@@ -251,6 +251,83 @@ add_action('init', 'register_post_types');
             'menu_position'      => null,
             'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
 		  ));
-		  
+
+		  register_post_type('services', array(
+            'labels'             => array(
+              'name'               => 'Услуги', // Основное название типа записи
+              'singular_name'      => 'Услуги', // отдельное название записи типа Book
+              'add_new'            => 'Добавить услугу',
+              'add_new_item'       => 'Добавить новую услугу',
+              'edit_item'          => 'Редактировать услугу',
+              'new_item'           => 'Новая услугу',
+              'view_item'          => 'Посмотреть услугу',
+              'search_items'       => 'Найти услугу',
+              'not_found'          => 'Не найдено',
+              'not_found_in_trash' => 'В корзине ничего не найдено',
+              'parent_item_colon'  => '',
+              'menu_name'          => 'Услуги'
+              ),
+            'public'             => true,
+            'publicly_queryable' => true,
+            'show_ui'            => true,
+            'show_in_menu'       => true,
+            'query_var'          => true,
+            'rewrite'            => true,
+            'capability_type'    => 'post',
+            'has_archive'        => false,
+            'hierarchical'       => false,
+            'menu_position'      => null,
+            'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+      ));
+
+
+
+
+
+      register_post_type('about', array(
+        'labels'             => array(
+          'name'               => 'Страница О компании', // Основное название типа записи
+          'singular_name'      => 'Страница О компании', // отдельное название записи типа Book
+          'add_new'            => 'Добавить страницу',
+          'add_new_item'       => 'Добавить новую страницу',
+          'edit_item'          => 'Редактировать страницу',
+          'new_item'           => 'Новая страницу',
+          'view_item'          => 'Посмотреть страницу',
+          'search_items'       => 'Найти страницу',
+          'not_found'          => 'Не найдено',
+          'not_found_in_trash' => 'В корзине ничего не найдено',
+          'parent_item_colon'  => '',
+          'menu_name'          => 'О компании'
+          ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+        'capability_type'    => 'post',
+        'has_archive'        => false,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+      
+      
+      
+      ## Отключает новый редактор блоков в WordPress (Гутенберг).
+## ver: 1.0
+if( 'disable_gutenberg' ){
+	add_filter( 'use_block_editor_for_post_type', '__return_false', 100 );
+
+	// отключим подключение базовых css стилей для блоков
+	// ВАЖНО! когда выйдут виджеты на блоках или что-то еще, эту строку нужно будет комментировать
+	remove_action( 'wp_enqueue_scripts', 'wp_common_block_scripts_and_styles' );
+
+	// Move the Privacy Policy help notice back under the title field.
+	add_action( 'admin_init', function(){
+		remove_action( 'admin_notices', [ 'WP_Privacy_Policy_Content', 'notice' ] );
+		add_action( 'edit_form_after_title', [ 'WP_Privacy_Policy_Content', 'notice' ] );
+	} );
+}
 		  
 }

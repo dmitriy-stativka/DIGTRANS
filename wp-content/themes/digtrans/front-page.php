@@ -28,7 +28,7 @@
                                                 <p>Цена: <span><?php echo $price_slider; ?></span></p>
                                             </div>
                                             <p class="smena_slider">Смена: <?php echo $smena_slider; ?> </p>
-                                            <a href="#" class="org-button">Заказать звонок</a>
+                                            <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button">Заказать звонок</a>
                                         </div>
                                     </div>
                                     <div class="flex_col--2-4">
@@ -48,20 +48,47 @@
             <?php include('/template-parts/techniks.php');?>
         </div>
     </div>
-    <div class="call-back">
-        <div class="flex_container">
-            <b class="title-name">Особые условия крупным клиентам </b>
-            <p>У вас крупная компания?  Мы предлагаем выгодные условия </p>
-            <p><span>Наш специалист свяжется с вами в течение 5 минут!</span></p>
-            <?php echo do_shortcode('[contact-form-7 id="72" title="Без названия"]');?>
-        </div>
-    </div>
+    <?php include('/template-parts/call-back.php');?>
     <div class="utp">
         <div class="flex_container">
             <b class="title-name">Почему стоит с нами работать</b>
             <?php include('/template-parts/utp.php');?>
         </div>
     </div>
+    <div class="services">
+        <div class="flex_container">
+            <b class="title-name">Наши строительные услуги</b>
+            <?php include('/template-parts/services.php');?>
+        </div>
+    </div>
+    <div class="about">
+        <div class="flex_container">
+            <?php
+                $params = array(
+                    'post_type' => 'about',
+                    'posts_per_page' => 1,
+                );
+                $query = new WP_Query( $params );
+                ?>
+                <?php if($query->have_posts()): ?>
+                        <?php while ($query->have_posts()): $query->the_post() ?>
+                            <?php $text_about = get_field('text_about');  
+                             if(get_user_locale() == 'ru_RU'){ 
+                                $id = 29;              
+                                $page_about = get_permalink(pll_get_post($id));   
+                            }elseif(get_user_locale() == 'uk'){ 
+                                $id = 31;
+                                $page_about = get_permalink(pll_get_post($id));   
+                            } 
+                                echo $text_about;
+                            ?>
+                        <?php endwhile; ?>
+                <?php endif; 
+            ?>
+            <a href="<?php echo $page_about; ?>" class="org-button">Подробнее</a>
+        </div>
+    </div>
+    <?php include('/template-parts/contacts.php');?>
 </div>
 
 <script>

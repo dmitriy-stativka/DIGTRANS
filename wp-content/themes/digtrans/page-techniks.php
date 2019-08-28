@@ -47,4 +47,11 @@
             </div>
         </div>
     </div>
+
+    <style>
+        .page-techniks .flex_col--1-4{
+            padding: 0;
+        }
+    </style>
+    
 <?php get_footer();?>

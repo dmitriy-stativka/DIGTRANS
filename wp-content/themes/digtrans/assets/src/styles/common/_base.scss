@@ -130,3 +130,13 @@ input {
   display: block;
   padding-bottom: 15px;
 }
+.logo {
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  &--text {
+    padding-left: 12px;
+  }
+}

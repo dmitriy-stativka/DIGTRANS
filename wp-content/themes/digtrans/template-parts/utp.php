@@ -14,15 +14,9 @@
                             $utp_text = get_field('utp_text');
                             $smena_technik = get_field('smena_technik'); 
                         ?>
-
-
-
                     <div class="flex_col--1-2">
                         <?php echo $utp_text;?>
                         <div class="utp_list">
-
-
-
                             <?php while ( have_rows('utp_list') ) : the_row(); ?>
                             <?php $utp_item_image = get_sub_field('utp_item_image');?>
 
@@ -30,7 +24,6 @@
                                     <img src="<?php echo $utp_item_image['url'];?>" alt="">
                                     <p><?php the_sub_field('utp_item_text') ;?></p>
                                 </div>
-
                             <?php endwhile; ?>
 
 
@@ -43,7 +36,6 @@
                     <div class="flex_col--1-2">
                         <img src="<?php echo $utp_image['url'];?>" alt="">
                     </div>
-                        
                 <?php endwhile; ?>
         <?php endif; 
     ?>

@@ -31,10 +31,10 @@
         </div>
     </div>
     <div class="flex_container">
-        <div class="header_logo">
+        <div class="logo">
             <a href="<?php echo $home_page;?>">
                 <img src="/wp-content/themes/digtrans/images/logo.svg" alt="">
-                <div class="header_logo--text">
+                <div class="logo--text">
                     <span>Оказание строительных услуг</span>
                     <b>Аренда спецтехники</b>
                 </div>
@@ -49,7 +49,7 @@
             <b><a href="tel:+38(066)666-66-66">+38(066)666-66-66</a></b>
         </div>
         <div class="header_call-back">
-            <a href="#" class="org-button call-back-button">Заказать звонок</a>
+            <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-back-button">Заказать звонок</a>
         </div>
     </div>
     <div class="header_nav">

@@ -1,4 +1,17 @@
+.technics{
+
+    .flex_col--1-4{
+        padding: 0;
+    }
+}
 .technik_link{
+    transition: box-shadow .3s ease;
+    padding: 15px 20px;
+
+    &:hover{
+        transition: box-shadow .3s ease;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
 
     b{
         font-weight: bold;

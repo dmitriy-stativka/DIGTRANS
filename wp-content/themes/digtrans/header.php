@@ -60,3 +60,9 @@
         </div>
     </div>
 </header>
+
+<div class="breadcrumbs-top">
+	<div class="flex_container">
+		<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+	</div>
+</div>

@@ -53,5 +53,4 @@
             padding: 0;
         }
     </style>
-    
 <?php get_footer();?>

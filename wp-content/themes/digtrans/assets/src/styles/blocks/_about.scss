@@ -22,3 +22,27 @@
         line-height: 29px;
     }
 }
+
+
+
+// Page O kompanii
+.o-kompanii{
+    .entry-content{
+        p,li{
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        strong{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    .title-name{
+        padding-top: 50px;
+    }
+    .call-back{
+        margin-bottom: 0;
+    }
+}

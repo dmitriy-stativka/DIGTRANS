@@ -152,6 +152,9 @@ input {
 .logo--text {
   padding-left: 12px; }
 
+.breadcrumbs-top {
+  margin: -30px 0 25px 0; }
+
 *,
 *:before,
 *:after {
@@ -416,9 +419,6 @@ textarea {
 .single-technics .technik_link {
   padding-bottom: 25px; }
 
-.page-template .title-name {
-  padding-top: 0; }
-
 .characteristics_technik {
   margin: 15px 0; }
   .characteristics_technik li {
@@ -485,7 +485,7 @@ textarea {
 
 .call-back {
   padding: 0 0 50px 0;
-  margin: 50px 0;
+  margin: 50px 0 0 0;
   position: relative;
   background-image: url("../images/call_back.jpg");
   background-size: cover;
@@ -576,6 +576,22 @@ textarea {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px; }
+
+.o-kompanii .entry-content p, .o-kompanii .entry-content li {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px; }
+
+.o-kompanii .entry-content strong {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px; }
+
+.o-kompanii .title-name {
+  padding-top: 50px; }
+
+.o-kompanii .call-back {
+  margin-bottom: 0; }
 
 .contacts span {
   font-weight: 500;

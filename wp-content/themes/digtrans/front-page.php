@@ -49,12 +49,7 @@
         </div>
     </div>
     <?php include('/template-parts/call-back.php');?>
-    <div class="utp">
-        <div class="flex_container">
-            <b class="title-name">Почему стоит с нами работать</b>
-            <?php include('/template-parts/utp.php');?>
-        </div>
-    </div>
+    <?php include('/template-parts/utp.php');?>
     <div class="services">
         <div class="flex_container">
             <b class="title-name">Наши строительные услуги</b>
@@ -101,5 +96,9 @@
         dotsClass: 'slick-dots'
     });
 </script>
-
+<style>
+    .call-back{
+        margin-bottom: 50px;
+    }
+</style>
 <?php get_footer();?>

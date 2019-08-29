@@ -107,6 +107,13 @@
         }
       }
 
+      &--1-4 {
+        
+        @media(min-width: $desktop) {
+          width: calc(100% - 75%);
+        }
+      }
+
       &--2-3 {
         
         @media(min-width: $desktop) {

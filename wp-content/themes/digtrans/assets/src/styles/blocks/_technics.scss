@@ -1,3 +1,14 @@
+.page-techniks{
+  .flex_row{
+    flex-wrap: wrap;
+  }
+  .flex_col-desk--1-4{
+      padding: 0;
+  }
+}
+.title-techniks{
+  height: 35px;
+}
 .technics{
 
     .flex_col--1-4{
@@ -7,6 +18,7 @@
 .technik_link{
     transition: box-shadow .3s ease;
     padding: 15px 20px;
+    display: block;
 
     &:hover{
         transition: box-shadow .3s ease;
@@ -78,4 +90,9 @@
             margin-top: 20px;
         }
     }
+}
+.description p{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 25px;
 }

@@ -46,7 +46,7 @@
             </div>
             <div class="footer--flex_col">
                 <span>Мы работаем:</span>
-                <b>С 8:00 - 19:00</b>
+                <b><?php the_field( "time_about", 29 ); ?></b>
                 <ul class="footer--list">
                     <b class="footer-title">Услуги:</b>
                     <?php
@@ -69,7 +69,7 @@
             </div>
             <div class="footer--flex_col">
                 <span>Номер телефона:</span>
-                <a class="footer--tell" href="tel:+380-00-000-00-00">+380-00-000-00-00</a>
+                <a class="footer--tell" href="tel:<?php the_field( "tel_about", 29); ?>"><?php the_field( "tel_about", 29); ?></a>
                 <?php 
                     if(get_user_locale() == 'ru_RU'){ 
                         $about_link = 29;              
@@ -97,5 +97,21 @@
     </div>
 </footer>
 <?php wp_footer(); ?>
+<script>
+    <?php 
+        if(get_user_locale() == 'ru_RU'){  ?>
+            var data = '25';
+        <?php }elseif(get_user_locale() == 'uk'){ ?>
+            var data = '27';
+        <?php } 
+    ?>
+    $(function() {
+        $('.page-item-' + data + ' a').attr('href', 'javascript:;');
+    });
+
+    $('.page-item-' + data + ' a').on('click', function(){
+        $('.header-sub-menu').toggleClass('show');
+    })
+</script>
 </body>
 </html>

@@ -19,7 +19,7 @@
                     <div class="flex_col--1-4">
                         <a class="technik_link" href="<?=the_permalink( $post->ID )?>">
                             <img src="<?php echo $image_technik['url'] ?>" alt="">
-                            <b><?php echo $name_technik;?></b>
+                            <b class="title-techniks"><?php echo $name_technik;?></b>
                             <ul class="characteristics_technik">
                                 <li>Цена: <i><?php echo $price_technik;?></i></li>
                                 <li>Смена: <?php echo $smena_technik;?></li>

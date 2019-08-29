@@ -9,6 +9,7 @@
 <?php get_header();?>
 
 
+
 <div class="o-kompanii">
     <div class="flex_container">
         <?php
@@ -23,6 +24,9 @@
     <?php include('/template-parts/utp.php');?>
 </div>
 
+
+
+            
 
 
 <style>

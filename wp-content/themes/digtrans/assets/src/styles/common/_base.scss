@@ -141,5 +141,10 @@ input {
   }
 }
 .breadcrumbs-top{
-  margin: -30px 0 25px 0;
+  margin: -40px 0 30px 0;
+
+  span{
+    font-size: 10px;
+    line-height: 12px;
+  }
 }

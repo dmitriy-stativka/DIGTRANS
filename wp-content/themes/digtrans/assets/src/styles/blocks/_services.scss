@@ -1,3 +1,18 @@
+.single-services{
+  p{
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .single-image{
+    float: right;
+    padding: 0 0 50px 50px;
+  }
+  b.single-services-title{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
 .services{
     padding-bottom: 50px;
 
@@ -26,4 +41,35 @@
         min-width: 175px;
         margin-top: 15px;
     }
+}
+
+
+.another-posts{
+  padding-top: 50px;
+  
+  .technik_link{
+    b.title-techniks{
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      display: block;
+      margin: 10px 0;
+      height: 35px;
+    }
+
+    &:hover{
+      box-shadow: none;
+    }
+  }
+
+  .main_gallery{
+    margin: 0 -20px;
+  }
+
+  
+
+  .slick-prev, .slick-next{
+    bottom: -30px;
+  }
+
 }

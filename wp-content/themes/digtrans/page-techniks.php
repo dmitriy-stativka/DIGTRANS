@@ -9,7 +9,7 @@
 <?php get_header();?>
     <div class="page-techniks">
         <div class="flex_container">
-            <b class="title-name">Аренда спецтехники в Одессе</b>
+            <b style="padding-top: 0;" class="title-name">Аренда спецтехники в Одессе</b>
             <div class="flex_row">
                 <?php
                     $params = array(
@@ -25,13 +25,10 @@
                                         $price_technik = get_field('price_technik');
                                         $smena_technik = get_field('smena_technik'); 
                                     ?>
-
-
-
-                                <div class="flex_col--1-4">
+                                <div class="flex_col-desk--1-4">
                                     <a class="technik_link" href="<?=the_permalink( $post->ID )?>">
                                         <img src="<?php echo $image_technik['url'] ?>" alt="">
-                                        <b><?php echo $name_technik;?></b>
+                                        <b class="title-techniks"><?php echo $name_technik;?></b>
                                         <ul class="characteristics_technik">
                                             <li>Цена: <i><?php echo $price_technik;?></i></li>
                                             <li>Смена: <?php echo $smena_technik;?></li>

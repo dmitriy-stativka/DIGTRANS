@@ -96,9 +96,5 @@
         dotsClass: 'slick-dots'
     });
 </script>
-<style>
-    .call-back{
-        margin-bottom: 50px;
-    }
-</style>
+
 <?php get_footer();?>

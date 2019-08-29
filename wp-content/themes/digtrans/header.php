@@ -15,8 +15,6 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="wp-content/themes/digtrans/js/slick.js"></script>
     <title><?php the_title(); ?></title>
 	<?php wp_head(); ?>
 </head>
@@ -35,18 +33,19 @@
             <a href="<?php echo $home_page;?>">
                 <img src="/wp-content/themes/digtrans/images/logo.svg" alt="">
                 <div class="logo--text">
-                    <span>Оказание строительных услуг</span>
-                    <b>Аренда спецтехники</b>
+                    <span><?php pll_e('social2'); ?></span>
+                    <b><?php pll_e('social3'); ?></b>
                 </div>
             </a>
         </div>
         <div class="header_worktime">
             <span>Мы работаем:</span>
-            <b>С 8:00 - 19:00</b>
+            <b><?php the_field( "time_about", 29 ); ?></b>
         </div>
+
         <div class="header_tell">
             <span>Номер телефона:</span>
-            <b><a href="tel:+38(066)666-66-66">+38(066)666-66-66</a></b>
+            <b><a href="tel:<?php the_field( "tel_about", 29); ?>"><?php the_field( "tel_about", 29); ?></a></b>
         </div>
         <div class="header_call-back">
             <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-back-button">Заказать звонок</a>
@@ -57,6 +56,39 @@
             <ul class="header_nav-list">
                 <?php wp_list_pages('title_li='); ?>
             </ul>
+
+
+            <ul class="header-sub-menu">
+                <?php
+                    $params = array(
+                        'post_type' => 'services',
+                        'posts_per_page' => -1,
+                    );
+                    $query = new WP_Query( $params );
+                    ?>
+                    <?php if($query->have_posts()): ?>
+
+                    
+                        <?php while ($query->have_posts()): $query->the_post() ?>
+                            <?php $title_service = get_field('title_service'); ?>
+                            <li>
+                                <a href="<?=the_permalink( $post->ID )?>"><?php echo $title_service;?></a>
+                            </li>
+                        <?php endwhile; ?>
+
+
+                    <?php endif; 
+
+                    wp_reset_query();
+                ?>
+            </ul>
+
+
+
+
+            
+
+
         </div>
     </div>
 </header>

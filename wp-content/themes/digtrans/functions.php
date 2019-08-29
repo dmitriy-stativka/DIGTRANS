@@ -126,8 +126,11 @@ function digtrans_scripts() {
     wp_enqueue_style('wp_play_style', get_stylesheet_directory_uri().'/styles/styles.min.css?');
     wp_enqueue_style('slick', get_stylesheet_directory_uri().'/styles/slick.css?');
 
-	wp_enqueue_script( 'digtrans-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    
+    wp_enqueue_script('jqueryDima', 'https://code.jquery.com/jquery-3.3.1.min.js');
+    wp_enqueue_script('slickJs', get_stylesheet_directory_uri().'/js/slick.js');
 
+    wp_enqueue_script( 'digtrans-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'digtrans-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -514,6 +517,18 @@ function dimox_breadcrumbs() {
 
   }
 } // end of dimox_breadcrumbs()
+
+
+
+
+
+    pll_register_string('social1', 'social2');
+    pll_register_string('social31', 'social3');
+    pll_register_string('social41', 'social4');
+    pll_register_string('social51', 'social5');
+    pll_register_string('social61', 'social6');
+    pll_register_string('social71', 'social7');
+    pll_register_string('social71', 'social8');
 
 
 }

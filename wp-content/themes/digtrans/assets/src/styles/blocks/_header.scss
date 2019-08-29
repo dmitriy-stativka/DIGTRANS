@@ -1,6 +1,42 @@
 .header {
   padding: 15px 0 50px 0;
 
+  &-sub-menu{
+    position: absolute;
+    top: 54px;
+    padding: 10px 20px;
+    background-color: #565655;
+    z-index: 99999999999999;
+    right: 0;
+    left: 0;
+    width: 250px;
+    margin: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+
+    li a{
+      color: $white;
+      padding: 10px 0;
+      display: block;
+      font-size: 12px;
+      line-height: 15px;
+      opacity: .8;
+      transition: opacity .2s ease;
+
+      &:hover{
+        opacity: 1;
+        transition: opacity .2s ease;
+      }
+    }
+
+    &.show{
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .3s ease, visibility .3s ease;
+    }
+  }
+
   .flex_container {
     display: flex;
     justify-content: space-between;
@@ -47,6 +83,8 @@
   &_nav{
     background-color: #565655;
     margin-top: 25px;
+    position: relative;
+    z-index: 999;
 
     &-list{
       display: flex;

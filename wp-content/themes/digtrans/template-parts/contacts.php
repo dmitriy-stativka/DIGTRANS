@@ -12,17 +12,23 @@
                         <p>г. Одесса, пр. Гагарина, 25, оф 342/1</p>
                     </li>
                     <li>
-                        <span>Телефон</span>
-                        <a href="tel:+380 00 000 00 00">+380 00 000 00 00</a>
-                        <a href="tel:+380 00 000 00 00">+380 00 000 00 00</a>
+                        <span>Телефон:</span>
+                        <a href="tel:<?php the_field( "tel_first_contact", 29 ); ?>"><?php the_field( "tel_first_contact", 29 ); ?></a>
+                        <a href="tel:<?php the_field( "tel_second_contact", 29 ); ?>"><?php the_field( "tel_second_contact", 29 ); ?></a>
                     </li>
                     <li>
                         <span>Время работы:</span>
-                        <p>с 8:00 до 19:00</p>
+                        <p><?php the_field( "time_about", 29 ); ?></p>
                     </li>
                     <li>
                         <span>Email:</span>
-                        <a href="mailto:digtrans2018@gmail.com">digtrans2018@gmail.com</a>
+                        <a href="mailto:<?php the_field( "email_contact", 29 ); ?>"><?php the_field( "email_contact", 29 ); ?></a>
+
+
+                        
+
+
+
                     </li>
                 </ul>
             </div>

@@ -1,6 +1,6 @@
 <div class="utp">
     <div class="flex_container">
-        <b class="title-name">Почему стоит с нами работать</b>
+        <b class="title-name"><?php pll_e('social15'); ?></b>
         <div class="flex_row">
             <?php
                 $params = array(

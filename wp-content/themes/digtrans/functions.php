@@ -531,4 +531,23 @@ function dimox_breadcrumbs() {
     pll_register_string('social71', 'social8');
 
 
+    pll_register_string('social71', 'social9');
+    pll_register_string('social71', 'social10');
+    pll_register_string('social71', 'social11');
+    pll_register_string('social71', 'social12');
+    pll_register_string('social71', 'social13');
+    pll_register_string('social71', 'social14');
+    pll_register_string('social71', 'social15');
+    pll_register_string('social71', 'social16');
+    pll_register_string('social71', 'social17');
+    pll_register_string('social71', 'social18');
+    pll_register_string('social71', 'social19');
+    pll_register_string('social71', 'social20');
+    pll_register_string('social71', 'social21');
+    pll_register_string('social71', 'social22');
+    pll_register_string('social71', 'social23');
+    pll_register_string('social71', 'social24');
+    pll_register_string('social71', 'social25');
+
+
 }

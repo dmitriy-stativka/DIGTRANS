@@ -452,7 +452,7 @@ textarea {
   .technik_link:hover {
     -webkit-transition: box-shadow .3s ease;
     transition: box-shadow .3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
   .technik_link b {
     font-weight: bold;
     font-size: 16px;
@@ -461,10 +461,6 @@ textarea {
     margin: 10px 0; }
   .technik_link span.org-button {
     max-width: 175px; }
-
-.page-template .technik_link,
-.single-technics .technik_link {
-  padding-bottom: 25px; }
 
 .characteristics_technik {
   margin: 15px 0; }
@@ -614,7 +610,7 @@ textarea {
     .services_link:hover {
       -webkit-transition: box-shadow .3s ease;
       transition: box-shadow .3s ease;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
   .services_name {
     font-size: 12px;
     line-height: 15px;

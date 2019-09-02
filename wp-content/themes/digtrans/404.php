@@ -14,8 +14,8 @@ get_header();
 	<div class="flex_container">
         <div class="error-page">
             <b>404</b>
-            <p>Страница временно не доступна, либо ее не существует. Убедитесь в правильности адреса и повторите попытку, либо вернитесь на главную.</p>
-            <a class="org-button" href="<?php echo $home_page;?>">На главную</a>
+            <p><?php pll_e('social22'); ?></p>
+            <a class="org-button" href="<?php echo $home_page;?>"><?php pll_e('social23'); ?></a>
         </div>
     </div>
 

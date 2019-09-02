@@ -39,12 +39,12 @@
             </a>
         </div>
         <div class="header_worktime">
-            <span>Мы работаем:</span>
+            <span><?php pll_e('social4'); ?></span>
             <b><?php the_field( "time_about", 29 ); ?></b>
         </div>
 
         <div class="header_tell">
-            <span>Номер телефона:</span>
+            <span><?php pll_e('social5'); ?></span>
             <b><a href="tel:<?php the_field( "tel_about", 29); ?>"><?php the_field( "tel_about", 29); ?></a></b>
         </div>
         <div class="header_call-back">
@@ -82,13 +82,6 @@
                     wp_reset_query();
                 ?>
             </ul>
-
-
-
-
-            
-
-
         </div>
     </div>
 </header>

@@ -25,10 +25,10 @@
                                                 <b><?php echo $title_slider; ?></b>
                                             </a>
                                             <div class="price_slider">
-                                                <p>Цена: <span><?php echo $price_slider; ?></span></p>
+                                                <p><?php pll_e('social6'); ?> <span><?php echo $price_slider; ?></span></p>
                                             </div>
-                                            <p class="smena_slider">Смена: <?php echo $smena_slider; ?> </p>
-                                            <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button">Заказать звонок</a>
+                                            <p class="smena_slider"><?php pll_e('social7'); ?> <?php echo $smena_slider; ?> </p>
+                                            <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button"><?php pll_e('social24'); ?></a>
                                         </div>
                                     </div>
                                     <div class="flex_col--2-4">
@@ -44,7 +44,7 @@
             <?php endif; ?>
         </div>
         <div class="technics">
-            <b class="title-name">Аренда спецтехники в Одессе</b>
+            <b class="title-name"><?php pll_e('social8'); ?></b>
             <?php include('/template-parts/techniks.php');?>
         </div>
     </div>
@@ -52,7 +52,7 @@
     <?php include('/template-parts/utp.php');?>
     <div class="services">
         <div class="flex_container">
-            <b class="title-name">Наши строительные услуги</b>
+            <b class="title-name"><?php pll_e('social9'); ?></b>
             <?php include('/template-parts/services.php');?>
         </div>
     </div>
@@ -80,7 +80,7 @@
                         <?php endwhile; ?>
                 <?php endif; 
             ?>
-            <a href="<?php echo $page_about; ?>" class="org-button">Подробнее</a>
+            <a href="<?php echo $page_about; ?>" class="org-button"><?php pll_e('social10'); ?></a>
         </div>
     </div>
     <?php include('/template-parts/contacts.php');?>

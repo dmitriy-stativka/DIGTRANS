@@ -1,6 +1,6 @@
 <div class="another-posts">
     <div class="flex_container">
-        <b class="single-services-title">Рекомендуемая техника</b>
+        <b class="single-services-title"><?php pll_e('social16'); ?></b>
         <div class="main_gallery">
             <?php
                 $params = array(
@@ -21,10 +21,10 @@
                                 <img src="<?php echo $image_technik['url'] ?>" alt="">
                                 <b class="title-techniks"><?php echo $name_technik;?></b>
                                 <ul class="characteristics_technik">
-                                    <li>Цена: <i><?php echo $price_technik;?></i></li>
-                                    <li>Смена: <?php echo $smena_technik;?></li>
+                                    <li><?php pll_e('social6'); ?> <i><?php echo $price_technik;?></i></li>
+                                    <li><?php pll_e('social7'); ?> <?php echo $smena_technik;?></li>
                                 </ul>
-                                <span class="org-button">Подробнее</span>
+                                <span class="org-button"><?php pll_e('social10'); ?></span>
                             </a>
                         </div>
                     <?php endwhile; ?>

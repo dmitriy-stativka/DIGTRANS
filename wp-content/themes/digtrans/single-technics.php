@@ -32,10 +32,10 @@ get_header(); ?>
 						<?php endwhile; ?>
 					</ul>
 					<ul class="characteristics_technik">
-						<li>Цена: <i><?php echo $price_technik;?></i></li>
-						<li>Смена: <?php echo $smena_technik;?></li>
+						<li><?php pll_e('social6'); ?> <i><?php echo $price_technik;?></i></li>
+						<li><?php pll_e('social7'); ?> <?php echo $smena_technik;?></li>
 					</ul>
-					<a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-button">Заказать звонок</a>
+					<a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-button"><?php pll_e('social24'); ?></a>
 				</div>
 				<div class="flex_col--2-4">
 					<div class="single-image">
@@ -44,7 +44,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="description">
-				<b class="title-name">Технические характеристики</b>
+				<b class="title-name"><?php pll_e('social25'); ?></b>
 				<?php echo $description_technik;?>
 			</div>
 		</div>

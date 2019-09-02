@@ -9,7 +9,7 @@
 <?php get_header();?>
     <div class="page-techniks">
         <div class="flex_container">
-            <b style="padding-top: 0;" class="title-name">Аренда спецтехники в Одессе</b>
+            <b style="padding-top: 0;" class="title-name"><?php pll_e('social3'); ?></b>
             <div class="flex_row">
                 <?php
                     $params = array(
@@ -30,11 +30,11 @@
                                         <img src="<?php echo $image_technik['url'] ?>" alt="">
                                         <b class="title-techniks"><?php echo $name_technik;?></b>
                                         <ul class="characteristics_technik">
-                                            <li>Цена: <i><?php echo $price_technik;?></i></li>
-                                            <li>Смена: <?php echo $smena_technik;?></li>
+                                            <li><?php pll_e('social6'); ?> <i><?php echo $price_technik;?></i></li>
+                                            <li><?php pll_e('social7'); ?> <?php echo $smena_technik;?></li>
                                         </ul>
                                         
-                                        <span class="org-button">Подробнее</span>
+                                        <span class="org-button"><?php pll_e('social10'); ?></span>
                                     </a>
                                 </div>
                                     

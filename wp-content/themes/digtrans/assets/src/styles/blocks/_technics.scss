@@ -22,7 +22,7 @@
 
     &:hover{
         transition: box-shadow .3s ease;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     b{
@@ -38,12 +38,12 @@
         }
     }
 }
-.page-template,
-.single-technics{
-    .technik_link{
-        padding-bottom: 25px;
-    }
-}
+// .page-template,
+// .single-technics{
+//     .technik_link{
+//         padding-bottom: 25px;
+//     }
+// }
 
 .characteristics_technik{
     margin: 15px 0;

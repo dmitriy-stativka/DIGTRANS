@@ -15,7 +15,7 @@
                         <a class="services_link" href="<?=the_permalink( $post->ID )?>">
                             <b class="services_name"><?php echo $title_service;?></b>
                             <img src="<?php echo $image_service['url'] ?>" alt="">
-                            <span class="org-button">Подробнее</span>
+                            <span class="org-button"><?php pll_e('social10'); ?></span>
                         </a>
                     </div>
                 <?php endwhile; ?>

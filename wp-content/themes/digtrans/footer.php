@@ -19,13 +19,13 @@
                     <a href="<?php echo $home_page;?>">
                         <img src="/wp-content/themes/digtrans/images/logo.svg" alt="">
                         <div class="logo--text">
-                            <span>Оказание строительных услуг</span>
-                            <b>Аренда спецтехники</b>
+                            <span><?php pll_e('social2'); ?></span>
+                            <b><?php pll_e('social3'); ?></b>
                         </div>
                     </a>
                 </div>
                 <ul class="footer--list">
-                    <b class="footer-title">Техника:</b>
+                    <b class="footer-title"><?php pll_e('social11'); ?></b>
                     <?php
                         $params = array(
                             'post_type' => 'technics',
@@ -45,10 +45,10 @@
                 </ul>
             </div>
             <div class="footer--flex_col">
-                <span>Мы работаем:</span>
+                <span><?php pll_e('social4'); ?></span>
                 <b><?php the_field( "time_about", 29 ); ?></b>
                 <ul class="footer--list">
-                    <b class="footer-title">Услуги:</b>
+                    <b class="footer-title"><?php pll_e('social12'); ?></b>
                     <?php
                         $params = array(
                             'post_type' => 'services',
@@ -68,7 +68,7 @@
                 </ul>
             </div>
             <div class="footer--flex_col">
-                <span>Номер телефона:</span>
+                <span><?php pll_e('social5'); ?></span>
                 <a class="footer--tell" href="tel:<?php the_field( "tel_about", 29); ?>"><?php the_field( "tel_about", 29); ?></a>
                 <?php 
                     if(get_user_locale() == 'ru_RU'){ 
@@ -84,14 +84,14 @@
                     } 
                 ?>
                 <b class="footer-title">
-                    <a href="<?php echo $page_about;?>">О компании</a> 
+                    <a href="<?php echo $page_about;?>"><?php pll_e('social13'); ?></a> 
                 </b>
                 <b class="footer-title">
-                    <a href="<?php echo $page_contacts;?>">Контакты</a> 
+                    <a href="<?php echo $page_contacts;?>"><?php pll_e('social14'); ?></a> 
                 </b>
             </div>
             <div class="footer--flex_col">
-                <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-back-button">Заказать звонок</a>
+                <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-back-button"><?php pll_e('social24'); ?></a>
             </div>
         </div>
     </div>

@@ -7,6 +7,21 @@
     background-position: center;
     color: $white;
 
+    @media (max-width: 1024px){
+      .flex_container{
+        z-index: 2;
+        position: relative;
+      }
+    }
+
+    input{
+      font-family: 'Montserrat';
+
+      &[type="submit"]{
+        width: 175px;
+      }
+    }
+
     &:after{
         content: '';
         position: absolute;

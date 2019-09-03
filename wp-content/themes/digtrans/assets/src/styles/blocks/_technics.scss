@@ -5,20 +5,56 @@
   .flex_col-desk--1-4{
       padding: 0;
   }
+
+  @media(max-width: 1024px){
+    .flex_col-desk--1-4{
+      margin-bottom: 15px;
+    }
+  }
 }
 .title-techniks{
   height: 35px;
 }
 .technics{
 
+  @media(max-width: 1024px){
+    .title-name{
+      padding-top: 0;
+    }  
+  }
+
+  .main_gallery_another{
+    margin: 0 -20px;
+  }
+
+  .flex_container{
+    padding: 0;
+  }
+
+  .single-services-title{
+    display: none;
+  }
+
+  .another-posts{
+    padding: 0;
+  }
+
     .flex_col--1-4{
         padding: 0;
+    }
+
+    .main_gallery.slick-slider{
+      display: block;
     }
 }
 .technik_link{
     transition: box-shadow .3s ease;
     padding: 15px 20px;
     display: block;
+
+    @media(max-width: 1024px){
+      padding: 5px 10px;
+    }
 
     &:hover{
         transition: box-shadow .3s ease;
@@ -31,6 +67,11 @@
         line-height: 20px;
         display: block;
         margin: 10px 0;
+
+        @media(max-width: 1024px){
+          font-size: 12px;
+          line-height: 13px;
+        }
     }
     span{
         &.org-button{
@@ -38,12 +79,6 @@
         }
     }
 }
-// .page-template,
-// .single-technics{
-//     .technik_link{
-//         padding-bottom: 25px;
-//     }
-// }
 
 .characteristics_technik{
     margin: 15px 0;
@@ -67,20 +102,56 @@
         display: block;
     }
 
+    @media(max-width: 700px){
+      .flex_row{
+        flex-direction: column;
+      }
+
+
+      .flex-single-text{
+        order: 2;
+      }
+
+
+      .description{
+        overflow-x: auto;
+
+        img{
+          min-width: 1234px;
+        }
+      }
+    }
+
     .characteristics_technik{
         li{
             font-size: 18px;
             line-height: 22px;
+
+            @media(max-width: 700px){
+              font-size: 14px;
+              line-height: 16px;
+              margin: 5px 0;
+            }
         }
     }
 
     .list_items_techniks{
         margin-bottom: 40px;
 
+        @media(max-width: 700px){
+          margin-bottom: 20px;
+        }
+
         li{
             margin: 10px 0;
             font-size: 16px;
             line-height: 25px;
+
+            @media(max-width: 700px){
+              font-size: 14px;
+              line-height: 16px;
+              margin: 5px 0;
+            }
         }
     }
 
@@ -90,9 +161,54 @@
             margin-top: 20px;
         }
     }
+
+
+    @media(max-width: 700px){
+      .single-title{
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 10px;
+      }
+    }
+    
 }
+
 .description p{
   font-weight: 500;
   font-size: 12px;
   line-height: 25px;
+}
+
+@media(max-width: 700px){
+
+  .another-posts .slick-prev, .another-posts .slick-next{
+    bottom: -40px;
+  }
+
+  .main_gallery_another{
+    padding: 0 10px;
+
+    .slick-prev{
+      left: 10px;
+    }
+
+    .slick-next {
+      left: 50px;
+    }
+
+    .technik_link b.title-techniks{
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    span.org-button{
+      padding: 12px;
+      font-size: 12px;
+    }
+
+    .characteristics_technik li{
+      font-size: 10px;
+      margin: 0;
+    }
+  }
 }

@@ -25,7 +25,7 @@
                                         $price_technik = get_field('price_technik');
                                         $smena_technik = get_field('smena_technik'); 
                                     ?>
-                                <div class="flex_col-desk--1-4">
+                                <div class="flex_col--1-2 flex_col-desk--1-4">
                                     <a class="technik_link" href="<?=the_permalink( $post->ID )?>">
                                         <img src="<?php echo $image_technik['url'] ?>" alt="">
                                         <b class="title-techniks"><?php echo $name_technik;?></b>

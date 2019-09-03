@@ -1,7 +1,7 @@
 <div class="another-posts">
     <div class="flex_container">
         <b class="single-services-title"><?php pll_e('social16'); ?></b>
-        <div class="main_gallery">
+        <div class="main_gallery_another">
             <?php
                 $params = array(
                     'post_type' => 'technics',
@@ -32,16 +32,3 @@
         </div>
     </div>
 </div>
-
-
-<script>
-    $('.main_gallery').slick({
-        arrows: true,
-        infinite: false,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        fade: false,
-        dots: false,
-        dotsClass: 'slick-dots'
-    });
-</script>

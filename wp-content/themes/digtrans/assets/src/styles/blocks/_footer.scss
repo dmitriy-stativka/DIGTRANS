@@ -3,10 +3,20 @@
     margin-top: 50px;
     background-color: $gray;
 
+    @media(max-width: 700px){
+      padding: 25px 0;
+    }
+
     a{
         color: $white;
         padding: 0;
         transition: color .2s ease;
+
+        @media(max-width: 1024px){
+          font-size: 12px;
+          line-height: 15px;
+        }
+
 
         &:hover{
             color: $orange;
@@ -43,10 +53,33 @@
     &_flex{
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;        
+        align-items: flex-start;  
+
+        @media(max-width: 1024px){
+          margin: 0 -10px;
+        
+          &_col{
+            padding: 0 10px;
+
+            &-tell{
+              width: 175px;
+            }
+          }
+        }
+
+        @media(max-width: 700px){
+          flex-direction: column;
+
+          &_col-tell,
+          .info_about,
+          .org-button {
+            display: none;
+          }
+        }
+        
     }
 
-    &--tell{
+    &_tell{
         color: $white;
         font-weight: 600;
     }
@@ -56,7 +89,7 @@
         margin: 25px 0 20px 0;
     }
 
-    &--list{
+    &_list{
         li{
             margin: 10px 0;
             

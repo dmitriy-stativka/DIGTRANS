@@ -14,7 +14,7 @@
 <footer class="footer">
     <div class="flex_container">
         <div class="footer_flex">
-            <div class="footer--flex_col">
+            <div class="footer_flex_col">
                 <div class="logo">
                     <a href="<?php echo $home_page;?>">
                         <img src="/wp-content/themes/digtrans/images/logo.svg" alt="">
@@ -24,7 +24,7 @@
                         </div>
                     </a>
                 </div>
-                <ul class="footer--list">
+                <ul class="footer_list">
                     <b class="footer-title"><?php pll_e('social11'); ?></b>
                     <?php
                         $params = array(
@@ -44,10 +44,12 @@
                     ?>
                 </ul>
             </div>
-            <div class="footer--flex_col">
-                <span><?php pll_e('social4'); ?></span>
-                <b><?php the_field( "time_about", 29 ); ?></b>
-                <ul class="footer--list">
+            <div class="footer_flex_col">
+                <div class="info_about">
+                    <span><?php pll_e('social4'); ?></span>
+                    <b><?php the_field( "time_about", 29 ); ?></b>
+                </div>
+                <ul class="footer_list">
                     <b class="footer-title"><?php pll_e('social12'); ?></b>
                     <?php
                         $params = array(
@@ -67,9 +69,9 @@
                     ?>
                 </ul>
             </div>
-            <div class="footer--flex_col">
+            <div class="footer_flex_col footer_flex_col-tell">
                 <span><?php pll_e('social5'); ?></span>
-                <a class="footer--tell" href="tel:<?php the_field( "tel_about", 29); ?>"><?php the_field( "tel_about", 29); ?></a>
+                <a class="footer_tell" href="tel:<?php the_field( "tel_about", 29); ?>"><?php the_field( "tel_about", 29); ?></a>
                 <?php 
                     if(get_user_locale() == 'ru_RU'){ 
                         $about_link = 29;              
@@ -90,7 +92,7 @@
                     <a href="<?php echo $page_contacts;?>"><?php pll_e('social14'); ?></a> 
                 </b>
             </div>
-            <div class="footer--flex_col">
+            <div class="footer_flex_col">
                 <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-back-button"><?php pll_e('social24'); ?></a>
             </div>
         </div>
@@ -111,7 +113,43 @@
 
     $('.page-item-' + data + ' a').on('click', function(){
         $('.header-sub-menu').toggleClass('show');
+    });
+
+
+    $('.header_button').on('click', function(){
+        $(this).toggleClass('open');
+        $('.header_nav').slideToggle();
     })
+
+    $('.main_gallery_another').slick({
+        arrows: true,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        fade: false,
+        dotsClass: 'slick-dots',
+        responsive: [{
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }]
+    });
+
+  
+    $('.main_gallery_services').slick({
+        arrows: true,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: false,
+        dotsClass: 'slick-dots',
+        fade: false
+    });    
+
+
 </script>
 </body>
 </html>

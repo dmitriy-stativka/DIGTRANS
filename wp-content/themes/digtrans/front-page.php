@@ -19,7 +19,7 @@
 
                             <div class="main_gallery_slide">
                                 <div class="flex_row">
-                                    <div class="flex_col--1-2">
+                                    <div class="flex_col--1-2 flex_col-tab--1-2">
                                         <div class="main_gallery_text">
                                             <a href="<?php echo $link_slider; ?>">
                                                 <b><?php echo $title_slider; ?></b>
@@ -31,7 +31,7 @@
                                             <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button"><?php pll_e('social24'); ?></a>
                                         </div>
                                     </div>
-                                    <div class="flex_col--2-4">
+                                    <div class="flex_col--2-4 flex_col-tab--1-2">
                                         <div class="main_gallery_image">
                                             <a href="<?php echo $link_slider; ?>">
                                                 <img src="<?php echo $image_slider['url'] ?>" alt="">
@@ -45,15 +45,16 @@
         </div>
         <div class="technics">
             <b class="title-name"><?php pll_e('social8'); ?></b>
-            <?php include('/template-parts/techniks.php');?>
+            
+            <?php include('/wp-content/themes/digtrans/template-parts/another-technicts.php');?>
         </div>
     </div>
-    <?php include('/template-parts/call-back.php');?>
-    <?php include('/template-parts/utp.php');?>
+    <?php include('/wp-content/themes/digtrans/template-parts/call-back.php');?>
+    <?php include('/wp-content/themes/digtrans/template-parts/utp.php');?>
     <div class="services">
         <div class="flex_container">
             <b class="title-name"><?php pll_e('social9'); ?></b>
-            <?php include('/template-parts/services.php');?>
+            <?php include('/wp-content/themes/digtrans/template-parts/services.php');?>
         </div>
     </div>
     <div class="about">
@@ -83,9 +84,12 @@
             <a href="<?php echo $page_about; ?>" class="org-button"><?php pll_e('social10'); ?></a>
         </div>
     </div>
-    <?php include('/template-parts/contacts.php');?>
+    <?php include('/wp-content/themes/digtrans/template-parts/contacts.php');?>
 </div>
 
+
+
+<?php get_footer();?>
 <script>
     $('.main_gallery').slick({
         arrows: true,
@@ -94,7 +98,5 @@
         slidesToScroll: 1,
         dots: true,
         dotsClass: 'slick-dots'
-    });
+    });    
 </script>
-
-<?php get_footer();?>

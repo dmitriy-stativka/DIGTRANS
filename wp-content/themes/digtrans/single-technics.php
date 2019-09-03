@@ -21,7 +21,7 @@ get_header(); ?>
 	<div class="single-technik">
 		<div class="flex_container">
 			<div class="flex_row">
-				<div class="flex_col--1-3">
+				<div class="flex_col--1-1 flex_col-desk--1-3 flex-single-text">
 					<b class="single-title"><?php echo $name_technik;?></b>
 					<ul class="list_items_techniks">
 						<?php while ( have_rows('characteristics_technik') ) : the_row(); ?>
@@ -37,7 +37,7 @@ get_header(); ?>
 					</ul>
 					<a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-button"><?php pll_e('social24'); ?></a>
 				</div>
-				<div class="flex_col--2-4">
+				<div class="flex_col--1-1 flex_col-desk--2-4">
 					<div class="single-image">
 						<img src="<?php echo $image_technik['url'] ?>" alt="">
 					</div>

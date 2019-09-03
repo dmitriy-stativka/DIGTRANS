@@ -6,6 +6,11 @@
   .single-image{
     float: right;
     padding: 0 0 50px 50px;
+
+    @media(max-width: 700px){
+      float: none;
+      padding: 0 0 20px 0;
+    }
   }
   b.single-services-title{
     font-weight: 600;
@@ -24,6 +29,10 @@
         transition: box-shadow .3s ease;
         padding: 15px 20px;
 
+        @media(max-width: 1024px){
+          padding: 5px 10px;
+        }
+
         &:hover{
             transition: box-shadow .3s ease;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -40,6 +49,33 @@
     .org-button{
         min-width: 175px;
         margin-top: 15px;
+
+        @media(max-width: 1024px){
+          min-width: 100%;
+        }
+    }
+
+    @media(max-width: 1024px){
+      .flex_row{
+        align-items: flex-end;
+      }
+    }
+
+    @media(max-width: 700px){
+      .main_gallery_services{
+        margin: 0 -10px;
+        
+        .main_gallery_slide{
+          padding: 0 10px;
+
+          .services_name{
+            min-height: 30px;
+          }
+        }
+        .slick-prev, .slick-next{
+          bottom: -45px;
+        }
+      }
     }
 }
 
@@ -71,5 +107,4 @@
   .slick-prev, .slick-next{
     bottom: -30px;
   }
-
 }

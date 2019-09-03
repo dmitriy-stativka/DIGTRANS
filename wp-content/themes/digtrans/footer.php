@@ -142,11 +142,18 @@
     $('.main_gallery_services').slick({
         arrows: true,
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
         dotsClass: 'slick-dots',
-        fade: false
+        fade: false,
+        responsive: [{
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }]
     });    
 
 

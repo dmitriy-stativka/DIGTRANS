@@ -20,6 +20,18 @@
 }
 .services{
     padding-bottom: 50px;
+    
+    .main_gallery_slide{
+      padding: 0 10px;
+    }
+
+    .slick-track{
+      margin: 0 -10px;
+    }
+
+    .slick-prev, .slick-next{
+      bottom: -45px;
+    }
 
     .flex_col--1-4{
         padding: 0;
@@ -106,5 +118,11 @@
 
   .slick-prev, .slick-next{
     bottom: -30px;
+  }
+  .slick-prev{
+    left: 15px;
+  }
+  .slick-next{
+    left: 55px;
   }
 }

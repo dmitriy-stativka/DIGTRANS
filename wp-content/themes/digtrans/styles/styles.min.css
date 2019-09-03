@@ -513,6 +513,9 @@ textarea {
   font-size: 12px;
   line-height: 25px; }
 
+.content .flex_row {
+  margin: 0 -20px; }
+
 .main_gallery b {
   font-size: 32px;
   font-weight: 800;
@@ -621,6 +624,12 @@ textarea {
 
 .services {
   padding-bottom: 50px; }
+  .services .main_gallery_slide {
+    padding: 0 10px; }
+  .services .slick-track {
+    margin: 0 -10px; }
+  .services .slick-prev, .services .slick-next {
+    bottom: -45px; }
   .services .flex_col--1-4 {
     padding: 0; }
   .services_link {
@@ -656,6 +665,10 @@ textarea {
     margin: 0 -20px; }
   .another-posts .slick-prev, .another-posts .slick-next {
     bottom: -30px; }
+  .another-posts .slick-prev {
+    left: 15px; }
+  .another-posts .slick-next {
+    left: 55px; }
 
 .about {
   background-color: #F1911E;

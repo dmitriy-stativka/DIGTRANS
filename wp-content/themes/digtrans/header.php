@@ -19,7 +19,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php $home_page = get_home_url();?>
+<?php $home_page = get_site_url();?>
 <header class="header">
     <div class="language">
         <div class="flex_container">

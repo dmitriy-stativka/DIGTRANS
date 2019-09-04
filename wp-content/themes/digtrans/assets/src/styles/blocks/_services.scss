@@ -37,20 +37,6 @@
         padding: 0;
     }
 
-    &_link{
-        transition: box-shadow .3s ease;
-        padding: 15px 20px;
-
-        @media(max-width: 1024px){
-          padding: 5px 10px;
-        }
-
-        &:hover{
-            transition: box-shadow .3s ease;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-    }
-
     &_name{
         font-size: 12px;
         line-height: 15px;
@@ -75,7 +61,7 @@
 
     @media(max-width: 700px){
       .main_gallery_services{
-        margin: 0 -10px;
+        margin: 0 -20px 0 0;;
         
         .main_gallery_slide{
           padding: 0 10px;

@@ -18,7 +18,12 @@
                         ?>
                         <div class="main_gallery_slide">
                             <a class="technik_link" href="<?=the_permalink( $post->ID )?>">
-                                <img src="<?php echo $image_technik['url'] ?>" alt="">
+                                <div class="technik_link_image">
+                                    
+                                    <img src="<?php echo $image_technik['url'];?>" alt="">
+                                    
+                                    <!-- <?php echo $image_technik['sizes']['gallery-size'];?> -->
+                                </div>
                                 <b class="title-techniks"><?php echo $name_technik;?></b>
                                 <ul class="characteristics_technik">
                                     <li><?php pll_e('social6'); ?> <i><?php echo $price_technik;?></i></li>

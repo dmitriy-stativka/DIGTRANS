@@ -20,6 +20,12 @@
 }
 .services{
     padding-bottom: 50px;
+
+    .slick-slider{
+      @media(max-width: 700px){
+        margin: 0 -10px;
+      }
+    }
     
     .main_gallery_slide{
       padding: 0 10px;
@@ -27,6 +33,10 @@
 
     .slick-track{
       margin: 0 -10px;
+
+      @media(max-width: 700px){
+        margin: 0 -20px 0 0;
+      }
     }
 
     .slick-prev, .slick-next{
@@ -60,9 +70,7 @@
     }
 
     @media(max-width: 700px){
-      .main_gallery_services{
-        margin: 0 -20px 0 0;;
-        
+      .main_gallery_services{        
         .main_gallery_slide{
           padding: 0 10px;
 
@@ -76,7 +84,6 @@
       }
     }
 }
-
 
 .another-posts{
   padding-top: 50px;

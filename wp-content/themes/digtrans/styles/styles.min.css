@@ -476,7 +476,7 @@ textarea {
     display: block;
     margin: 10px 0; }
   .technik_link span.org-button {
-    max-width: 175px; }
+    width: 175px; }
 
 .characteristics_technik {
   margin: 15px 0; }
@@ -911,6 +911,10 @@ textarea {
       width: 60px; }
     .header .logo--text b {
       font-size: 12px; }
+    .technics .main_gallery_another {
+      margin: 0 -20px; }
+      .technik_link span.org-button {
+        width: 100%; }
   .single-technik .flex_row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -962,14 +966,16 @@ textarea {
     .single-services .single-image {
       float: none;
       padding: 0 0 20px 0; }
-    .services .main_gallery_services {
-      margin: 0 -20px 0 0; }
-      .services .main_gallery_services .main_gallery_slide {
-        padding: 0 10px; }
-        .services .main_gallery_services .main_gallery_slide .services_name {
-          min-height: 30px; }
-      .services .main_gallery_services .slick-prev, .services .main_gallery_services .slick-next {
-        bottom: -45px; }
+    .services .slick-slider {
+      margin: 0 -10px; }
+      .services .slick-track {
+        margin: 0 -20px 0 0; }
+    .services .main_gallery_services .main_gallery_slide {
+      padding: 0 10px; }
+      .services .main_gallery_services .main_gallery_slide .services_name {
+        min-height: 30px; }
+    .services .main_gallery_services .slick-prev, .services .main_gallery_services .slick-next {
+      bottom: -45px; }
     .about {
       padding: 25px 0; }
       .about strong {

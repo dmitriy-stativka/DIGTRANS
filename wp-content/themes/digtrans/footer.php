@@ -98,6 +98,28 @@
         </div>
     </div>
 </footer>
+
+<div class="preloader">
+    <div class="loader">
+        <div class="item-1"></div>
+        <div class="item-2"></div>
+        <div class="item-3"></div>
+        <div class="item-4"></div>
+        <div class="item-5"></div>
+    </div>
+</div>
+
+<script>
+    $(window).on('load', function () {
+        $preloader = $('.preloader'),
+        $loader = $preloader.find('.loader');
+        $loader.fadeOut();
+        $preloader.delay(350).fadeOut('slow');
+    });
+</script>
+
+
+
 <?php wp_footer(); ?>
 <script>
     <?php 

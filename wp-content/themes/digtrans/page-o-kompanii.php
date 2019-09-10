@@ -7,9 +7,6 @@
 */
 ?>
 <?php get_header();?>
-
-
-
 <div class="o-kompanii">
     <div class="flex_container">
         <?php
@@ -19,16 +16,9 @@
             endwhile; // End of the loop.
         ?>	
     </div>
-
-    <?php include('/template-parts/call-back.php');?>
+    <?php include('/template-parts/call-back-another.php');?>
     <?php include('/template-parts/utp.php');?>
 </div>
-
-
-
-            
-
-
 <style>
     .entry-title{
         display: none;

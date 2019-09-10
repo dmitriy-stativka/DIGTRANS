@@ -20,6 +20,27 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
+<div class="preloader">
+    <div class="loader">
+        <div class="item-1"></div>
+        <div class="item-2"></div>
+        <div class="item-3"></div>
+        <div class="item-4"></div>
+        <div class="item-5"></div>
+    </div>
+</div>
+
+<script>
+    $(window).on('load', function () {
+        $preloader = $('.preloader'),
+        $loader = $preloader.find('.loader');
+        $loader.fadeOut();
+        $preloader.delay(350).fadeOut('slow');
+    });
+</script>
+
+
 <?php $home_page = get_site_url();?>
 <header class="header">
     <div class="language">
@@ -52,7 +73,7 @@
             <b><a href="tel:<?php the_field( "tel_about", 29); ?>"><?php the_field( "tel_about", 29); ?></a></b>
         </div>
         <div class="header_call-back">
-            <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-back-button">Заказать звонок</a>
+            <a class="org-button call-back-button popup__toggle">Заказать звонок</a>        
         </div>
     </div>
     <div class="header_nav">
@@ -61,6 +82,8 @@
                 <?php wp_list_pages('title_li='); ?>
             </ul>
 
+
+            <?php wp_nav_menu();?>
 
             <ul class="header-sub-menu">
                 <?php

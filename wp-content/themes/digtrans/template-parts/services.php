@@ -14,7 +14,7 @@
                     <div class="main_gallery_slide">
                         <a class="services_link" href="<?=the_permalink( $post->ID )?>">
                             <b class="services_name"><?php echo $title_service;?></b>
-                            <img src="<?php echo $image_service['url'] ?>" alt="">
+                            <img src="<?php echo $image_service['sizes']['gallery-size'];?>" alt="">
                             <span class="org-button"><?php pll_e('social10'); ?></span>
                         </a> 
                     </div>

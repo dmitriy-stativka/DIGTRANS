@@ -14,7 +14,8 @@ get_header(); ?>
 	$price_technik = get_field('price_technik');
 	$smena_technik = get_field('smena_technik'); 
 	$characteristics_technik = get_field('characteristics_technik'); 
-	$description_technik = get_field('description_technik'); 
+    $description_technik = get_field('description_technik'); 
+    $firm_technology = get_field('firm_technology');
 
 ?>
 
@@ -22,7 +23,7 @@ get_header(); ?>
 		<div class="flex_container">
 			<div class="flex_row">
 				<div class="flex_col--1-1 flex_col-desk--1-3 flex-single-text">
-					<b class="single-title"><?php echo $name_technik;?></b>
+                    <b class="title-techniks"><?php echo $name_technik;?><br><?php echo $firm_technology;?></b>
 					<ul class="list_items_techniks">
 						<?php while ( have_rows('characteristics_technik') ) : the_row(); ?>
 							<li>
@@ -35,7 +36,7 @@ get_header(); ?>
 						<li><?php pll_e('social6'); ?> <i><?php echo $price_technik;?></i></li>
 						<li><?php pll_e('social7'); ?> <?php echo $smena_technik;?></li>
 					</ul>
-					<a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-button"><?php pll_e('social24'); ?></a>
+					<a class="org-button popup__toggle call-button"><?php pll_e('social24'); ?></a>
 				</div>
 				<div class="flex_col--1-1 flex_col-desk--2-4">
 					<div class="single-image">
@@ -49,7 +50,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<?php include('/template-parts/call-back.php');?>
 	<?php include('/template-parts/contacts.php');?>
 
 	<style>

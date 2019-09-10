@@ -28,7 +28,7 @@
                                                 <p><?php pll_e('social6'); ?> <span><?php echo $price_slider; ?></span></p>
                                             </div>
                                             <p class="smena_slider"><?php pll_e('social7'); ?> <?php echo $smena_slider; ?> </p>
-                                            <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button"><?php pll_e('social24'); ?></a>
+                                            <a class="org-button popup__toggle"><?php pll_e('social24'); ?></a>
                                         </div>
                                     </div>
                                     <div class="flex_col--2-4 flex_col-tab--1-2">

@@ -69,4 +69,26 @@
     .call-back{
         margin-bottom: 0;
     }
+
+
+    .utp{
+      p{
+        display: none;
+      }
+      &_item{
+        p{
+          display: block;
+        }
+      }
+      .flex_row{
+        align-items: flex-end;
+        margin-top: -40px;
+
+        .flex_col--1-2:nth-child(2){
+          img{
+            max-width: 400px;
+          }
+        }
+      }
+    }
 }

@@ -1,6 +1,9 @@
 .page-techniks{
   .flex_row{
     flex-wrap: wrap;
+    @media(min-width: 1024px){
+      margin: 0 -20px;
+    }
   }
   .flex_col-desk--1-4{
       padding: 0;
@@ -12,9 +15,6 @@
     }
   }
 }
-.title-techniks{
-  height: 35px;
-}
 .technics{
 
   @media(max-width: 1024px){
@@ -24,9 +24,7 @@
   }
 
   .main_gallery_another{
-    margin: 0 -10px;
-
-    
+    margin: 0 -20px;
   }
 
   .flex_container{
@@ -87,7 +85,7 @@
 }
 
 .characteristics_technik{
-    margin: 15px 0;
+    margin: 20px 0;
 
     li{
         display: block;
@@ -142,7 +140,7 @@
     }
 
     .list_items_techniks{
-        margin-bottom: 40px;
+        margin: 15px 0 40px 0;
 
         @media(max-width: 700px){
           margin-bottom: 20px;
@@ -156,7 +154,7 @@
             @media(max-width: 700px){
               font-size: 14px;
               line-height: 16px;
-              margin: 5px 0;
+              margin: 10px 0;
             }
         }
     }
@@ -179,13 +177,31 @@
     
 }
 
-.description p{
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 25px;
+.description{
+  p{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 25px;
+  }
+  .title-name{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+  }
 }
 
 @media(max-width: 700px){
+
+  .single-image{
+    margin-bottom: 15px;
+  }
+
+  .single-technik{
+    .title-techniks{
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
 
   .another-posts .slick-prev, .another-posts .slick-next{
     bottom: -40px;
@@ -205,6 +221,7 @@
     .technik_link b.title-techniks{
       font-size: 12px;
       line-height: 14px;
+      height: 35px;
     }
 
     span.org-button{
@@ -217,4 +234,8 @@
       margin: 0;
     }
   }
+}
+
+.single-image img{
+  margin: 0 0 0 auto;
 }

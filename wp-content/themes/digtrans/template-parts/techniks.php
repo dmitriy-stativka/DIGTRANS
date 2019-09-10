@@ -1,4 +1,4 @@
-<div class="flex_row">
+<!-- <div class="flex_row">
     <?php
         $params = array(
             'post_type' => 'technics',
@@ -29,4 +29,4 @@
                 <?php endwhile; ?>
         <?php endif; 
     ?>
-</div>
+</div> -->

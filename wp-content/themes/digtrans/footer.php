@@ -24,6 +24,26 @@
                         </div>
                     </a>
                 </div>
+                
+            </div>
+            <div class="footer_flex_col">
+                <div class="info_about">
+                    <span><?php pll_e('social4'); ?></span>
+                    <b><?php the_field( "time_about", 29 ); ?></b>
+                </div>
+               
+            </div>
+            <div class="footer_flex_col footer_flex_col-tell">
+                <span><?php pll_e('social5'); ?></span>
+                <a class="footer_tell" href="tel:<?php the_field( "tel_about", 29); ?>"><?php the_field( "tel_about", 29); ?></a>
+                
+            </div>
+            <div class="footer_flex_col">
+                <a class="org-button popup__toggle call-back-button"><?php pll_e('social24'); ?></a>
+            </div>
+        </div>
+        <div class="footer_flex footer_flex_lists">
+            <div class="footer_flex_col footer_flex_techniks">
                 <ul class="footer_list">
                     <b class="footer-title"><?php pll_e('social11'); ?></b>
                     <?php
@@ -36,19 +56,17 @@
                         <?php if($query->have_posts()): ?>
                             <?php while ($query->have_posts()): $query->the_post() ?>
                                 <?php $name_technik = get_field('name_technik'); ?>
+                                <?php $firm_technology = get_field('firm_technology');?>
+                                
                                 <li>
-                                    <a href="<?=the_permalink( $post->ID )?>"><?php echo $name_technik;?></a>
+                                    <a href="<?=the_permalink( $post->ID )?>"><?php echo $name_technik;?> <?php echo $firm_technology;?> </a>
                                 </li>
                             <?php endwhile; ?>
                         <?php endif; 
                     ?>
                 </ul>
             </div>
-            <div class="footer_flex_col">
-                <div class="info_about">
-                    <span><?php pll_e('social4'); ?></span>
-                    <b><?php the_field( "time_about", 29 ); ?></b>
-                </div>
+            <div class="footer_flex_col footer_flex_services">
                 <ul class="footer_list">
                     <b class="footer-title"><?php pll_e('social12'); ?></b>
                     <?php
@@ -69,9 +87,7 @@
                     ?>
                 </ul>
             </div>
-            <div class="footer_flex_col footer_flex_col-tell">
-                <span><?php pll_e('social5'); ?></span>
-                <a class="footer_tell" href="tel:<?php the_field( "tel_about", 29); ?>"><?php the_field( "tel_about", 29); ?></a>
+            <div class="footer_flex_col footer_flex_links">
                 <?php 
                     if(get_user_locale() == 'ru_RU'){ 
                         $about_link = 29;              
@@ -92,34 +108,50 @@
                     <a href="<?php echo $page_contacts;?>"><?php pll_e('social14'); ?></a> 
                 </b>
             </div>
-            <div class="footer_flex_col">
-                <a onclick="$('html, body').animate({scrollTop:$('.call-back').offset().top}, '500', 'swing');" class="org-button call-back-button"><?php pll_e('social24'); ?></a>
-            </div>
+        
         </div>
     </div>
 </footer>
 
-<div class="preloader">
-    <div class="loader">
-        <div class="item-1"></div>
-        <div class="item-2"></div>
-        <div class="item-3"></div>
-        <div class="item-4"></div>
-        <div class="item-5"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+
+<div class="call-back-fixed popup__toggle"></div>
+
+<div class="popup__overlay">
+    <div class="popup">
+        <a href="#" class="popup__close"></a>
+        <div class="text-center">
+            <b class="popup-title"><?php pll_e('social28'); ?></b>
+            <p class="popup-desc"><?php pll_e('social29'); ?></p>
+        </div>
+        <?php echo do_shortcode('[contact-form-7 id="72" title="Send for Email"]'); ?>
     </div>
 </div>
 
+
 <script>
-    $(window).on('load', function () {
-        $preloader = $('.preloader'),
-        $loader = $preloader.find('.loader');
-        $loader.fadeOut();
-        $preloader.delay(350).fadeOut('slow');
+    $('input[type="tel"]').mask('+38 (000) 000-00-00');
+</script>
+<script>
+    var p = $('.popup__overlay')
+    $('.popup__toggle').click(function() {
+        p.addClass('popup_open')
+    })
+    p.click(function(event) {
+        e = event || window.event
+        if (e.target == this) {
+            $(p).removeClass('popup_open');
+        }
+    })
+    $('.popup__close').click(function() {
+        p.removeClass('popup_open')
+    })
+    $(function() {
+        $('.popup__toggle').bind('click', function(e) {
+            e.preventDefault();
+        });
     });
 </script>
-
-
-
 <?php wp_footer(); ?>
 <script>
     <?php 

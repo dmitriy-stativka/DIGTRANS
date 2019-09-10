@@ -31,8 +31,7 @@ get_header(); ?>
 			
 		</div>
 	</div>
-	<?php include('/template-parts/call-back.php');?>
-    <?php include('/template-parts/contacts.php');?>
+	
     
     <?php include('/template-parts/another-technicts.php');?>
     

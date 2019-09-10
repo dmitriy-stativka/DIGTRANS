@@ -24,11 +24,14 @@
                                         $name_technik = get_field('name_technik');
                                         $price_technik = get_field('price_technik');
                                         $smena_technik = get_field('smena_technik'); 
+                                        $firm_technology = get_field('firm_technology');
                                     ?>
                                 <div class="flex_col--1-2 flex_col-desk--1-4">
                                     <a class="technik_link" href="<?=the_permalink( $post->ID )?>">
-                                        <img src="<?php echo $image_technik['url'] ?>" alt="">
-                                        <b class="title-techniks"><?php echo $name_technik;?></b>
+                                        <div class="technik_link_image">
+                                            <img src="<?php echo $image_technik['sizes']['gallery-size'];?>" alt="">
+                                        </div>
+                                        <b class="title-techniks"><?php echo $name_technik;?><br><?php echo $firm_technology;?></b>
                                         <ul class="characteristics_technik">
                                             <li><?php pll_e('social6'); ?> <i><?php echo $price_technik;?></i></li>
                                             <li><?php pll_e('social7'); ?> <?php echo $smena_technik;?></li>

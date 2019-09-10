@@ -540,6 +540,11 @@ function dimox_breadcrumbs() {
     pll_register_string('social71', 'social23');
     pll_register_string('social71', 'social24');
     pll_register_string('social71', 'social25');
+
+    pll_register_string('social71', 'social26');
+    pll_register_string('social71', 'social27');
+    pll_register_string('social71', 'social28');
+    pll_register_string('social71', 'social29');
 }
 
 //add image sizes

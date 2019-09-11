@@ -16,8 +16,8 @@
             endwhile; // End of the loop.
         ?>	
     </div>
-    <?php include('/template-parts/call-back-another.php');?>
-    <?php include('/template-parts/utp.php');?>
+    <?php include('wp-content/themes/digtrans/template-parts/call-back-another.php');?>
+    <?php include('wp-content/themes/digtrans/template-parts/utp.php');?>
 </div>
 <style>
     .entry-title{

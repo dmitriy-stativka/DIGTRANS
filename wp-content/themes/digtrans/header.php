@@ -81,10 +81,6 @@
             <ul class="header_nav-list">
                 <?php wp_list_pages('title_li='); ?>
             </ul>
-
-
-            <?php wp_nav_menu();?>
-
             <ul class="header-sub-menu">
                 <?php
                     $params = array(

@@ -130,6 +130,9 @@ input {
     -webkit-transition: background-color .2s ease;
     transition: background-color .2s ease; }
 
+.content {
+  overflow: hidden; }
+
 .title-name {
   font-size: 24px;
   line-height: 29px;
@@ -564,11 +567,17 @@ textarea {
 /*==========Popup==========*/
 .popup {
   display: inline-block;
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   padding: 25px;
   background: #fff;
   vertical-align: middle;
-  width: 450px; }
+  max-width: 450px;
+  height: 340px; }
   .popup__overlay {
     position: fixed;
     left: 0;
@@ -597,16 +606,18 @@ textarea {
     visibility: visible; }
   .popup__close {
     display: block;
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    width: 18px;
-    height: 18px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
     cursor: pointer;
     background: url("../images/popup-close.png") no-repeat;
+    background-size: contain;
     text-align: center; }
   .popup-title {
-    font-size: 21px; }
+    font-size: 21px;
+    font-weight: 600; }
   .popup input[type="tel"],
   .popup input[type="text"] {
     background-color: rgba(158, 156, 158, 0.12);
@@ -635,7 +646,7 @@ textarea {
       bottom: 0;
       margin: auto; }
 
-/*==========Popup==========*/
+/*==========Popup_END==========*/
 .call-back-fixed {
   width: 70px;
   height: 70px;
@@ -655,7 +666,7 @@ textarea {
   .call-back-fixed:after {
     content: '';
     position: absolute;
-    background: url("../images/icon_call.png") no-repeat center center;
+    background: url("/wp-content/themes/digtrans/images/icon_call.png") no-repeat center center;
     top: 0;
     bottom: 0;
     right: 0;
@@ -677,8 +688,7 @@ textarea {
     left: 0;
     width: 250px;
     margin: auto;
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     -webkit-transition: opacity .3s ease, visibility .3s ease;
     transition: opacity .3s ease, visibility .3s ease; }
     .header-sub-menu li a {
@@ -694,11 +704,6 @@ textarea {
         opacity: 1;
         -webkit-transition: opacity .2s ease;
         transition: opacity .2s ease; }
-    .header-sub-menu.show {
-      opacity: 1;
-      visibility: visible;
-      -webkit-transition: opacity .3s ease, visibility .3s ease;
-      transition: opacity .3s ease, visibility .3s ease; }
   .header .flex_container {
     display: -webkit-box;
     display: flex;
@@ -742,6 +747,29 @@ textarea {
       .header_nav-list .page_item {
         position: relative;
         margin-right: 180px; }
+        .header_nav-list .page_item.current_menu_items a:before {
+          content: '';
+          display: block;
+          border: 4px solid transparent;
+          border-top: 4px solid #fff;
+          width: 0;
+          height: 0;
+          position: absolute;
+          right: -12px;
+          top: 25px;
+          margin: auto;
+          -webkit-transition: -webkit-transform .3s ease;
+          transition: -webkit-transform .3s ease;
+          transition: transform .3s ease;
+          transition: transform .3s ease, -webkit-transform .3s ease; }
+        .header_nav-list .page_item.current_menu_items.show_submenu a:before {
+          -webkit-transform: rotate(180deg);
+                  transform: rotate(180deg);
+          -webkit-transition: -webkit-transform .3s ease;
+          transition: -webkit-transform .3s ease;
+          transition: transform .3s ease;
+          transition: transform .3s ease, -webkit-transform .3s ease;
+          top: 22px; }
         .header_nav-list .page_item a {
           color: #fff;
           padding: 20px 0;
@@ -758,10 +786,6 @@ textarea {
             bottom: 10px;
             left: 0;
             right: 0; }
-        .header_nav-list .page_item:hover a:after {
-          width: 100%;
-          -webkit-transition: width .3s ease;
-          transition: width .3s ease; }
         .header_nav-list .page_item.current_page_item a:after {
           content: '';
           width: 100%;
@@ -849,6 +873,10 @@ textarea {
   font-weight: 500;
   font-size: 18px;
   line-height: 17px; }
+
+.single-technik .title-techniks {
+  font-size: 28px;
+  line-height: 34px; }
 
 .single-image img {
   margin: 0 0 0 auto; }
@@ -1084,6 +1112,11 @@ textarea {
     margin: 0 auto 25px auto; }
   .error-page a {
     min-width: 175px; }
+  @media (min-width: 700px) {
+          .header_nav-list .page_item:hover a:after {
+            width: 100%;
+            -webkit-transition: width .3s ease;
+            transition: width .3s ease; } }
   @media (min-width: 768px) {
     .flex_container {
       padding: 0 20px; }
@@ -1239,6 +1272,12 @@ textarea {
           transition: transform .3s ease;
           transition: transform .3s ease, -webkit-transform .3s ease;
           top: 10px; }
+      .header-sub-menu {
+        position: static;
+        width: inherit;
+        padding: 0; }
+        .header-sub-menu li a {
+          padding: 10px 0 !important; }
       .header span {
         font-size: 10px;
         line-height: 11px; }
@@ -1254,6 +1293,13 @@ textarea {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
                   flex-direction: column; }
+            .header_nav-list .page_item.current_menu_items a:before {
+              right: 35%; }
+          .header_nav-list .page_item {
+            width: 100%; }
+            .header_nav-list .page_item.current_page_item a:after {
+              width: 40%;
+              margin: 0 auto; }
     .header_call-back {
       display: none; }
     .header_lang {
@@ -1273,6 +1319,14 @@ textarea {
         margin: 0;
         font-weight: 500;
         font-size: 12px; }
+    .header_tell:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      display: block;
+      padding-right: 15px;
+      background: url("../images/callback.svg") no-repeat;
+      background-size: contain; }
     .header_worktime {
       left: 150px; }
     .header .logo img {
@@ -1381,6 +1435,7 @@ textarea {
   @media (max-width: 1100px) {
         .header_nav-list {
           -webkit-box-pack: justify;
-                  justify-content: space-between; }
+                  justify-content: space-between;
+          text-align: center; }
           .header_nav-list .page_item {
             margin-right: 0; } }

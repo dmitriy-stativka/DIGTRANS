@@ -197,11 +197,17 @@ $color: $color-1, $color-2, $color-3, $color-4, $color-5;
 /*==========Popup==========*/
 .popup {
   display: inline-block;
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   padding: 25px;
   background: #fff;
   vertical-align: middle;
-  width: 450px;
+  max-width: 450px;
+  height: 340px;
 
   &__overlay{
     position: fixed;
@@ -242,18 +248,20 @@ $color: $color-1, $color-2, $color-3, $color-4, $color-5;
 
   &__close{
     display: block;
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    width: 18px;
-    height: 18px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
     cursor: pointer;
     background: url('../images/popup-close.png') no-repeat;
+    background-size: contain;
     text-align: center;
   }
 
   &-title{
-    font-size: 21px
+    font-size: 21px;
+    font-weight: 600;
   }
 
   input[type="tel"],
@@ -299,7 +307,7 @@ $color: $color-1, $color-2, $color-3, $color-4, $color-5;
     }
   }
 }
-/*==========Popup==========*/
+/*==========Popup_END==========*/
 .call-back-fixed{
   width: 70px;
   height: 70px;
@@ -320,7 +328,7 @@ $color: $color-1, $color-2, $color-3, $color-4, $color-5;
   &:after{
     content: '';
     position: absolute;
-    background: url('../images/icon_call.png') no-repeat center center;
+    background: url('/wp-content/themes/digtrans/images/icon_call.png') no-repeat center center;
     top: 0;
     bottom: 0;
     right: 0;

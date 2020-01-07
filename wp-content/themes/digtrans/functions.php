@@ -122,7 +122,7 @@ add_action( 'widgets_init', 'digtrans_widgets_init' );
 function digtrans_scripts() {
     
     wp_enqueue_style( 'digtrans-style', get_stylesheet_uri() );
-    wp_enqueue_style('montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap&subset=cyrillic-ext');
+
     wp_enqueue_style('wp_play_style', get_stylesheet_directory_uri().'/styles/styles.min.css?');
     wp_enqueue_style('slick', get_stylesheet_directory_uri().'/styles/slick.css?');
 
